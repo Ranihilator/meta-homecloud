@@ -1,0 +1,15 @@
+<manifest>
+  <remote name="oe"                     fetch="https://github.com/openembedded"/>
+  <remote name="yocto"                  fetch="https://git.yoctoproject.org/git"/>
+  <remote name="ranihilator"            fetch="https://github.com/Ranihilator"/>
+
+  <project name="openembedded-core.git" path="./"                        remote="oe"          revision="refs/tags/yocto-4.0.3"                    upstream="kirkstone"/>
+  <project name="bitbake.git"           path="bitbake"                   remote="oe"          revision="refs/tags/yocto-4.0.3"                    upstream="2.0"/>\
+  <project name="meta-openembedded.git" path="meta-openembedded"         remote="oe"          revision="05dcac98473402d87e0af73bbc2c5a6a840abe93" upstream="kirkstone"/>
+  <project name="meta-yocto"            path="meta-yocto"                remote="yocto"       revision="ca9c465e37b693ab768ee8e21a929d1c18956e98" upstream="kirkstone"/>
+  <project name="meta-security"         path="meta-security"             remote="yocto"       revision="c79262a30bd385f5dbb009ef8704a1a01644528e" upstream="kirkstone"/>
+
+  <project name="meta-homecloud"        path="meta-homecloud"            remote="ranihilator" revision="main"                                     upstream="main">
+    <linkfile src="setup.sh"            dest="setup.sh" />
+  </project>
+</manifest>
